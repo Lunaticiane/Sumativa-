@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Avaliacao Sumativa II – Resultado de Aprendizagem 4, 5 & 6 – Gestor de Leituras de LUNA TICIANE LANGA</title>
+<link rel="stylesheet" href="estilo.css">
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="app.js"></script>
+</head>
+<body>
+
+
+
+<header>
+  
+  <h1>Avaliacao Sumativa II – Resultado de Aprendizagem 4, 5 & 6 – Gestor de Leituras de LUNA TICIANE LANGA</h1>
+  <p class="escola">Biblioteca da Escola Horizonte</p>
+</header>
+
+<main>
+
+  
+  <section>
+    <h2>Pesquisar no catalogo</h2>
+    <form id="formPesquisa" class="linha">
+      <input type="text" id="termo" placeholder="Titulo ou autor ou o ano">
+      <button type="submit" id="btnPesquisar" class="destaque">Pesquisar no catalogo</button>
+    </form>
+  </section>
+
+ 
+  <section>
+    <h2 id="tituloForm">Registar livro</h2>
+    <form id="formLivro" novalidate>
+      <div class="campos">
+        <div>
+          <label for="titulo">Titulo</label>
+          <input type="text" id="titulo">
+        </div>
+        <div>
+          <label for="autor">Autor</label>
+          <input type="text" id="autor">
+        </div>
+        <div>
+          <label for="ano">Ano</label>
+          <input type="text" id="ano" maxlength="4" placeholder="opcional">
+        </div>
+      </div>
+      <button type="submit" class="destaque">Guardar</button>
+      <button type="button" id="btnCancelar" class="cinza">Cancelar</button>
+    </form>
+  </section>
+
+ 
+  <div id="mensagem" class="info">Pesquise no catalogo ou registe um livro.</div>
+
+
+  <section>
+    <div class="linha numeros">
+      <span>Total de livros: <strong id="total">0</strong></span>
+      <span>Lidos: <strong id="lidos">0</strong></span>
+      <span>Por ler: <strong id="porLer">0</strong></span>
+      <button type="button" id="btnVerXml">ver XML</button>
+      <button type="button" id="btnExportar" class="destaque">exportar XML</button>
+    </div>
+  </section>
+
+
+  <section>
+    <input type="text" id="filtro" placeholder="Filtrar por titulo ou autor">
+    <div class="tabela-caixa">
+      <table>
+        <thead>
+          <tr><th>Codigo</th><th>Titulo</th><th>Autor</th><th>Ano</th><th>Estado</th><th>Accoes</th></tr>
+        </thead>
+        <tbody id="corpoTabela"></tbody>
+      </table>
+    </div>
+  </section>
+
+ 
+  <section id="caixaXml">
+    <h2>Conteudo do XML</h2>
+    <pre id="areaXml"></pre>
+  </section>
+
+</main>
+
+</body>
+</html>
